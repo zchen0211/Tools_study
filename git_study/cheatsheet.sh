@@ -24,3 +24,7 @@ git diff --staged
 
 # reset all changes in staged and working 
 git reset --hard
+
+# stay in branch1 first!
+git merge branch1 branch2
+# merge all changes of branch2 into branch1
