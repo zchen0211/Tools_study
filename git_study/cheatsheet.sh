@@ -16,4 +16,11 @@ git commit -a -m "xxxxx" # local update
 
 git status # check file status
 
+# difference between working drectory and staging area
+git diff
+# check difference between staging area (git-added file before commit)
+# and latest commit
 git diff --staged
+
+# reset all changes in staged and working 
+git reset --hard
