@@ -1,3 +1,0 @@
-/Users/zhuoyuanchen/research/Tools_study/CMake/build/CMakeFiles/rebuild_cache.dir
-/Users/zhuoyuanchen/research/Tools_study/CMake/build/CMakeFiles/edit_cache.dir
-/Users/zhuoyuanchen/research/Tools_study/CMake/build/CMakeFiles/Hello.dir
