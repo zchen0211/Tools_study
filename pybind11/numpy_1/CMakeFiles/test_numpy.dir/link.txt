@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC   -shared  -o test_numpy.cpython-35m-x86_64-linux-gnu.so CMakeFiles/test_numpy.dir/test_numpy_array.cc.o -flto 
