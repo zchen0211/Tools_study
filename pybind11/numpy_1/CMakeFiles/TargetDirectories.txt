@@ -1,3 +1,0 @@
-/home/zhuoyuan/research/Tools_study/pybind11/numpy_1/CMakeFiles/edit_cache.dir
-/home/zhuoyuan/research/Tools_study/pybind11/numpy_1/CMakeFiles/rebuild_cache.dir
-/home/zhuoyuan/research/Tools_study/pybind11/numpy_1/CMakeFiles/test_numpy.dir
