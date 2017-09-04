@@ -40,3 +40,4 @@ git checkout develop
 # 5b. 
 git push origin develop
 
+git branch -d for_merge
