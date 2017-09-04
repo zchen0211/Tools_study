@@ -1,0 +1,6 @@
+docker version
+
+docker build -t paddle:dev .
+
+# docker run --rm -it -v $PWD:/paddle paddle:dev /bin/bash
+# nvidia-docker run --rm -it -v $PWD:/paddle paddle:dev /bin/bash
