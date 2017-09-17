@@ -10,10 +10,12 @@ int main() {
     b[i] = i;
   }
 
-  void* a_alias = a; 
-  void* b_alias = b; 
+  bool* a_alias = a; 
+  bool* b_alias = b; 
 
-  int offset = sizeof(int) / sizeof(void);
+  std::cout << "bool: " << sizeof(bool) << std::endl;
+  std::cout << "int: " << sizeof(int) << std::endl;
+  int offset = sizeof(int) / sizeof(bool);
 
   memcpy(a_alias, b_alias+4*offset, 4*sizeof(int));
   memcpy(a_alias+4*offset, b_alias, 4*sizeof(int));
