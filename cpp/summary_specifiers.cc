@@ -1,7 +1,14 @@
 // The explicit specifier specifies that a constructor or conversion function (since C++11) doesn't allow implicit conversions or copy-initialization. It may only appear within the decl-specifier-seq of the declaration of such a function within its class definition.
 explicit
+struct A
+{
+    A(int) { }
+    explicit A(int, int) {}
+};
+A a1 = 1; // OK
+A a2 = {1, 2}; // error
 
-// Assert something as immutable
+// Assert something as immutable in a class (put const at the end)
 const
 class A {
   A() {}
