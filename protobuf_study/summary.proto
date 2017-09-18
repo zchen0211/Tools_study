@@ -1,0 +1,8 @@
+// or proto2, which is different
+syntax = "proto3";
+
+//
+option cc_enable_arenas = true;
+option java_outer_classname = "TensorSliceProtos";
+
+
