@@ -1,3 +1,0 @@
-/Users/zhuoyuanchen/research/eigen_test/build/CMakeFiles/rebuild_cache.dir
-/Users/zhuoyuanchen/research/eigen_test/build/CMakeFiles/edit_cache.dir
-/Users/zhuoyuanchen/research/eigen_test/build/CMakeFiles/my_program.dir
