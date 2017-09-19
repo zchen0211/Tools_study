@@ -100,5 +100,23 @@ while (!q.empty()) {
 	q.pop();
 }
 
-
-
+/*
+ * string
+ */
+#include <string>
+string a;
+// Access
+a[3] = 'c';
+cout << a.at(i);
+// capacity
+a.empty(); a.size();
+a.length();
+// iterators
+a.begin(); a.end();
+// modifiers
+a.clear();
+a.insert(index, "abc");
+// compare
+str1.compare(str2) != 0;
+a += b;
+// find
