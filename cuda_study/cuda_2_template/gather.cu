@@ -13,9 +13,10 @@ int main() {
 
   // implemented by function
   // specialization at runtime
-  Gather<float>(p_src, p_index, p_out, 4, 2, true);
+  // Gather<float>(p_src, p_index, p_out, 4, 2, true);
 
-  // Gather2<float, true>(p_src, p_index, p_out, 4, 2);
+  Gather2<float, true> g_functor1;
+  g_functor1(p_src, p_index, p_out, 4, 2);
 
   printf("CPU gather result\n");
   for (int i = 0; i < 8; ++i)
@@ -51,8 +52,11 @@ int main() {
     printf("%f\n", p_out[i]);
   printf("\n");
 
-  Gather<float>(d_src, d_index, d_out, 4, 2, false);
+  // Gather<float>(d_src, d_index, d_out, 4, 2, false);
 
+  Gather2<float, true> g_functor2;
+  g_functor2(p_src, p_index, p_out, 4, 2);
+  
   float g_src[12];
   int g_index[2];
   float g_out[8];
