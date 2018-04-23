@@ -20,34 +20,34 @@ sudo mount -t ntfs /dev/sdb2 /media/DATA: actually mount the data
 lsb_release: check Linux release version
 
 ## Access Management
-chmod
-chown
-su: substitute user identity
-sudo
-ulimit: user limit
+- chmod
+- chown
+- su: substitute user identity
+- sudo
+- ulimit: user limit
 
 ## Commands and Execution
-alias: alias m="ssh -X zhuoyuan@172.19.32.131"
-bash and sh: execute .sh in a subshell
-source and .: run in current shell
-exec: execute a program
-type: describe a command
-!!: run the last command again
- ###: #comment
+- alias: alias m="ssh -X zhuoyuan@172.19.32.131"
+- bash and sh: execute .sh in a subshell
+- source and .: run in current shell
+- exec: execute a program
+- type: describe a command
+- !!: run the last command again
+- ###: #comment
 
 ## Compile
-make
+- make
 
 ## Compression Tool
-bzip2: compress
-gzip: compress
-rar
-tar -xvf ...: extract(x) and display verbose(v) information from a
-[gzipped(z)] file(f). -xvzf
-unrar
-zip / unzip: # zip -r abc.zip file1 directory2
-unzip abc.zip
-unzip -v abc.zip (just see what’s inside without unzipping)
+- bzip2: compress
+- gzip: compress
+- rar
+- tar -xvf ...: extract(x) and display verbose(v) information from a
+- [gzipped(z)] file(f). -xvzf
+- unrar
+- zip / unzip: # zip -r abc.zip file1 directory2
+- unzip abc.zip
+- unzip -v abc.zip (just see what’s inside without unzipping)
 
 ## Dependency Check
 ldconfig:Configure Dynamic Linker Run Time Bindings. e.g., ldconfig /usr/local/cuda/lib64
@@ -129,31 +129,32 @@ ssh: secure shell client
 wget: retrieve web pages or files from http, https or ftp
 
 ## Output
-tee: redirect output to multiple files, tee command is used to store and view (both at the same time) the output of any other command. Example: Paddle use 2>&1 | tee log to print on both screen and an output file
+- tee: redirect output to multiple files, tee command is used to store and view (both at the same time) the output of any other command. Example: Paddle use 2>&1 | tee log to print on both screen and an output file
 
 ## Package Management
-apt-get:  Search for and install software packages (Debian/Ubuntu)
-aptitude: Search for and install software packages (Debian/Ubuntu)
-dpkg: package management:
-dpkg -l : list all packages
-dpkg -l | grep opencv
-dpkg -S : search a package
-dpkg -i xxx.deb : install a deb file
-sudo dpkg -r zip : uninstall a package
+- apt-get:  Search for and install software packages (Debian/Ubuntu)
+- aptitude: Search for and install software packages (Debian/Ubuntu)
+- dpkg: package management:
+- dpkg -l : list all packages
+- dpkg -l | grep opencv
+- dpkg -S : search a package
+- dpkg -i xxx.deb : install a deb file
+- sudo dpkg -r zip : uninstall a package
 
 ## Session Management
-screen
+- screen
+- screen -r
 
 ## Time
 date
 
 ## To Study
-comm
-cut
-install
-join:
-more
-sed
-sort: sort -k 2,2 input.txt >output.txt
-tr: change format; tr -s ’\textbackslash n’ < input.txt > output.txt;
-uniq: uniq < input.txt >output.txt
+- comm
+- cut
+- install
+- join:
+- more
+- sed
+- sort: sort -k 2,2 input.txt >output.txt
+- tr: change format; tr -s ’\textbackslash n’ < input.txt > output.txt;
+- uniq: uniq < input.txt >output.txt
