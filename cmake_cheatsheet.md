@@ -26,7 +26,7 @@ Yangqing Jia's link: https://rix0r.nl/blog/2015/08/13/cmake-guide/
 
 ## General process
 - cmake_minimum_required(VERSION 3.3)
-- project(elf)
+- project(elf): project setup, automatically set languages, and variables such as PROJECT_SOURCE_DIR
 - find header files: include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src_cpp/)
 - add other projects with their own CMakeLists in building: add_subdirectory(src_cpp/elf ${CMAKE_CURRENT_BINARY_DIR}/elf)
 - To build a library file: add_library(elf ${ELF_SOURCES}) will build a libelf.a; add_library(name [STATIC | SHARED | MODULE] source1)
@@ -38,6 +38,7 @@ Yangqing Jia's link: https://rix0r.nl/blog/2015/08/13/cmake-guide/
 - find_package(Threads)
 - find_package(TBB REQUIRED tbb)  # Need to find_package in parent scope
 - find_package(OpenCV REQUIRED)
+- Find<package>.cmake in the CMAKE_MODULE_PATH followed by the CMake installation, in our case /usr/share/cmake-2.8/modules/*.cmake, or the config mode: i.e., to find, e.g. OpenCVConfig.cmake
 
 ## execute something
 execute_process(COMMAND git rev-parse HEAD OUTPUT_VARIABLE GIT_COMMIT_HASH)
