@@ -16,11 +16,13 @@ Yangqing Jia's link: https://rix0r.nl/blog/2015/08/13/cmake-guide/
 - PYBIND11_CPP_STANDARD: -std=c++17
 - CMAKE_BUILD_TYPE: Release
 - CMAKE_CURRENT_SOURCE_DIR
+- CMAKE_MODULE_PATH: look for packages here
 - CMAKE_C_COMPILER
 - CMAKE_CXX_COMPILER
 - CMAKE_C_FLAGS
 - EXECUTABLE_OUTPUT_PATH
 - LIBRARY_OUTPUT_PATH
+- PROJECT_SOURCE_DIR
 
 ## General process
 - cmake_minimum_required(VERSION 3.3)
@@ -35,7 +37,7 @@ Yangqing Jia's link: https://rix0r.nl/blog/2015/08/13/cmake-guide/
 ## Find Packages
 - find_package(Threads)
 - find_package(TBB REQUIRED tbb)  # Need to find_package in parent scope
-
+- find_package(OpenCV REQUIRED)
 
 ## execute something
 execute_process(COMMAND git rev-parse HEAD OUTPUT_VARIABLE GIT_COMMIT_HASH)
@@ -46,7 +48,25 @@ execute_process(COMMAND git rev-parse HEAD OUTPUT_VARIABLE GIT_COMMIT_HASH)
 - pybind11_add_module(py_elfgames_go pybind_module.cc)
 - target_link_libraries(py_elfgames_go PRIVATE elfgames_go zmq)
 - py_elfgames_go is importable in python
+- file(WRITE/APPEND/READ/GLOB/GLOB_RECURSE): file manipulation,
 
 ## other important
-- string
-- list
+- add_custom_target: Add a target with no output so it will always be built.
+- add_definitions: add_definitions(-DCPU_ONLY)
+- configure_file(input output): copy a file to another location and modify its
+contents
+- foreach()
+- include: load and run CMake code from a file or module
+- include_directories: e.g. include_directories(SYSTEM ${GLOG_INCLUDE_DIRS})
+- macro(name): define macro, paired with endmacro()
+- marked_as_advanced:
+- message(mode "message to say"): print out compiling message!!!
+- option(USE_XXX "message" ON): options
+- project(caffe): project setup, automatically set languages, and variables such
+as PROJECT_SOURCE_DIR
+- set(variable, value [CACHE] [FORCE] | [ PARENT_SCOPE])
+- source_group(name FILES src): define a grouping of source files
+- string()
+
+## list
+- list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
