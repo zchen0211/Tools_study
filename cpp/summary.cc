@@ -4,8 +4,6 @@
 // The difference between private and protected comes into play only within classes derived from the base class. 
 // Members of a derived class can access protected members of a base class directly, but they can- not directly access private members of the base class.
 
-auto a= 3;
-
 std::call_once
 
 std::iota
@@ -26,22 +24,10 @@ std::tie
 std::swap(a, b);
 std::forward();
 
-std::memcpy();
 std::numeric_limits<size_t>::max();
-
-//std::move is used to indicate that an object t may be "moved from", i.e. allowing the efficient transfer of resources from t to another object.
-std::move();
-// std::string str = "Hello";
-// std::vector<std::string> v;
-// v.push_back(str); // str is still "Hello", a deep copy
-// v.push_back(std::move(str)); // str is now "", moved here
-// Always combined with unique_ptr
 
 std::copy();
 
-std::sort();
-std::min();
-std::max();
 std::equal();
 std::complex;
 std::tuple<int, int>;
@@ -49,10 +35,8 @@ std::find();
 
 std::get<0> lrs;
 
-std::pair;
-std::make_pair;
+
 std::unordered_set<string> a;
-// std::unordered_map<string, int> a;
 template<
     class Key,
     class T,
