@@ -6,14 +6,6 @@
 
 auto a= 3;
 
-// std::function, create a function
-template< class R, class... Args >
-class function<R(Args...)>;
-// example in Paddle:
-// typedef std::function<BaseClass*(CreateArgs...)> ClassCreator;
-// ClassCreator creator; return creator(args...);
-// Return an instance of the given class
-
 std::call_once
 
 std::iota
@@ -56,17 +48,7 @@ std::tuple<int, int>;
 std::find();
 
 std::get<0> lrs;
-std::normal_distribution<double>
-int32 dim = std::uniform_int_distribution<int32>;
-std::uniform_int_distribution<int> random_int(1, 5);
-std::bernoulli_distribution random_bool;
-std::shuffle();
-std::uniform_real_distribution<float> distribution(-1.0f, 1.0f);
 
-std::vector<int> a;
-// append an element to a container
-std::vector::push_back();
-std::vector::emplace_back();
 std::pair;
 std::make_pair;
 std::unordered_set<string> a;
@@ -80,7 +62,6 @@ template<
 > class unordered_map;
 // defined in #inlucde <unordered_map>
 std::map
-std::array
 std::deque<int> a;
 std::hash;
 
