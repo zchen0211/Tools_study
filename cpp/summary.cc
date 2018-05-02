@@ -45,10 +45,8 @@ template<
     class Allocator = std::allocator< std::pair<const Key, T> >
 > class unordered_map;
 // defined in #inlucde <unordered_map>
-std::map
 std::deque<int> a;
 std::hash;
-
 
 std::initializer_list<TF_Operation*>
 
