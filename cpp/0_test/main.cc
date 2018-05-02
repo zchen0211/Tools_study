@@ -28,13 +28,6 @@ class MyClass2 {
 };
 
 int main() {
-  // Vector
-  std::vector<std::vector<int> > a;
-  a.push_back(std::vector<int>());
-  a.push_back(std::vector<int>());
-
-  a[0].clear();
-  a[1].clear();
   int real = 2;
   int& ref = real;
   a[0].push_back(ref);
